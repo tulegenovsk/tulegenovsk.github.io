@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
+    <!-- Төлегенов Серікбайдың кәсіби веб-резюме жобасы -->
+    <!-- Қолданылған технологиялар: HTML5, CSS3, JavaScript -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тулегенов Серикбай | Professional CV</title>
+    <title>Серикбай Тулегенов | Резюме</title>
+    
+    <!-- Интер шрифті мен FontAwesome белгішелері іске қосылған -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #0f172a; --accent: #2563eb; --bg: #f1f5f9; --white: #ffffff; --text: #334155; }
+        /* Дизайнның негізгі параметрлері мен түстер палитрасы */
+        :root { 
+            --primary: #0f172a; 
+            --accent: #2563eb; 
+            --bg: #f1f5f9; 
+            --white: #ffffff; 
+            --text: #334155; 
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); padding: 20px; color: var(--text); line-height: 1.6; }
         
+        /* Көптілділік интерфейсіне арналған батырмалар стилі */
         .lang-switcher { text-align: right; max-width: 1000px; margin: 0 auto 15px; }
         .lang-btn { background: var(--white); border: 1px solid #cbd5e1; padding: 6px 18px; cursor: pointer; border-radius: 6px; font-weight: 600; transition: 0.3s; }
         .lang-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
 
+        /* Контейнер мен бағандардың орналасуы (Flexbox қолданылған) */
         .container { max-width: 1000px; margin: 0 auto; background: var(--white); display: flex; flex-wrap: wrap; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
         .sidebar { width: 320px; background: var(--primary); color: white; padding: 40px 30px; }
         .main { flex: 1; padding: 50px; }
         
+        /* Профиль суретіне арналған стильдер */
         .profile-img { width: 100%; border-radius: 15px; border: 4px solid var(--accent); margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        
         h1 { font-size: 28px; margin-bottom: 10px; line-height: 1.2; }
         .role { color: var(--accent); font-weight: 700; margin-bottom: 30px; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
         
         h2 { font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid #334155; padding-bottom: 8px; color: var(--accent); text-transform: uppercase; display: flex; align-items: center; }
         h2 i { margin-right: 10px; font-size: 18px; }
         
-        section { margin-bottom: 40px; }
         .exp-item { margin-bottom: 30px; border-left: 3px solid var(--accent); padding-left: 20px; }
         .exp-title { font-weight: 700; font-size: 17px; color: var(--primary); }
         .exp-date { font-size: 14px; color: #64748b; font-weight: 600; margin-bottom: 5px; }
-        .exp-desc { margin-top: 10px; font-size: 15px; }
-        .exp-desc li { list-style: none; margin-bottom: 5px; position: relative; padding-left: 15px; }
-        .exp-desc li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
 
+        /* Дағдылар тізімін тегтер ретінде көрсету форматы */
         .skill-group { margin-bottom: 15px; }
         .skill-label { font-weight: 700; font-size: 14px; margin-bottom: 5px; display: block; }
         .skill-tag { display: inline-block; background: #e2e8f0; padding: 5px 12px; border-radius: 6px; margin: 3px; font-size: 13px; font-weight: 600; color: var(--primary); }
         
+        /* Адаптивті дизайнды іске асыру (Media Queries) */
         @media (max-width: 850px) { .container { flex-direction: column; } .sidebar { width: 100%; } }
     </style>
 </head>
 <body>
 
+    <!-- Тілдерді ауыстыру панелі -->
     <div class="lang-switcher">
         <button class="lang-btn active" onclick="setLanguage('kz')">KZ</button>
         <button class="lang-btn" onclick="setLanguage('ru')">RU</button>
@@ -50,7 +66,7 @@
     </div>
 
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Сол жақ баған: Негізгі ақпарат пен байланыс -->
         <div class="sidebar">
             <img src="Screenshot_1.png" alt="Серикбай" class="profile-img">
             
@@ -70,7 +86,7 @@
             <p id="drive"><i class="fas fa-car"></i> Жүргізуші куәлігі: B, C</p>
         </div>
 
-        <!-- Main Content -->
+        <!-- Оң жақ баған: Кәсіби тәжірибе мен білім -->
         <div class="main">
             <header>
                 <h1>Тулегенов Серикбай Камаладдинулы</h1>
@@ -79,7 +95,7 @@
 
             <section>
                 <h2 id="t-about"><i class="fas fa-user"></i> Өзім туралы</h2>
-                <p id="about-text">IT-жүйелердің тұрақтылығына жауап беремін және техникалық мәселелерді тез шешемін. Жасанды интеллект саласына қызығушылығым бар. Python (Pandas) арқылы деректерді өңдеу негіздерін білемін.</p>
+                <p id="about-text">IT-жүйелердің тұрақтылығына жауап беремін және техникалық мәселелерді тез шешемін. Python (Pandas) арқылы деректерді өңдеу негіздері қолданылады.</p>
             </section>
 
             <section>
@@ -88,35 +104,18 @@
                 <div class="exp-item">
                     <p class="exp-date" id="exp1-date">Желтоқсан 2025 — Қазіргі уақыт</p>
                     <p class="exp-title">АТК Жибек жолы</p>
-                    <div class="exp-desc">
-                        <ul id="exp1-list">
-                            <li>Серверлерді әкімшілендіру (1С, Asterisk, Биометрия).</li>
-                            <li>Желілік инфрақұрылымды және АТС жүйесін қолдау.</li>
-                            <li>Офистік бағдарламалық жасақтамаларды орнату және жөндеу.</li>
-                        </ul>
+                    <div id="exp1-list" style="font-size: 15px; margin-top: 10px;">
+                        <p>• Серверлерді әкімшілендіру (1С, Asterisk, Биометрия).</p>
+                        <p>• Желілік инфрақұрылымды қолдау.</p>
                     </div>
                 </div>
 
                 <div class="exp-item">
                     <p class="exp-date" id="exp2-date">Наурыз 2024 — Желтоқсан 2025</p>
                     <p class="exp-title">Shera Inn Hotel</p>
-                    <div class="exp-desc">
-                        <ul id="exp2-list">
-                            <li>IT-жүйелерді техникалық сүйемелдеу және оргтехниканы жөндеу.</li>
-                            <li>Отельдегі конференцияларға аудио-визуалды қолдау көрсету.</li>
-                            <li>Корпоративтік поштаны әкімшілендіру.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="exp-item">
-                    <p class="exp-date" id="exp3-date">Маусым 2022 — Ақпан 2024</p>
-                    <p class="exp-title">Medcom centre / A class med</p>
-                    <div class="exp-desc">
-                        <ul id="exp3-list">
-                            <li>1С және ЛИС бағдарламаларымен жұмыс.</li>
-                            <li>Медициналық тіркеу және құжаттамаларды жүргізу.</li>
-                        </ul>
+                    <div id="exp2-list" style="font-size: 15px; margin-top: 10px;">
+                        <p>• IT-жүйелерді техникалық сүйемелдеу.</p>
+                        <p>• Конференцияларға аудио-визуалды қолдау көрсету.</p>
                     </div>
                 </div>
             </section>
@@ -124,14 +123,14 @@
             <section>
                 <h2 id="t-skills"><i class="fas fa-tools"></i> Кәсіби дағдылар</h2>
                 <div class="skill-group">
-                    <span class="skill-label" id="s-admin">Әкімшілендіру:</span>
+                    <span class="skill-label" id="s-admin">Әкімшілендіру технологиялары:</span>
                     <span class="skill-tag">MikroTik</span> <span class="skill-tag">Linux (Ubuntu)</span> 
-                    <span class="skill-tag">Windows Server</span> <span class="skill-tag">IP-telephony (Asterisk)</span>
+                    <span class="skill-tag">Windows Server</span> <span class="skill-tag">Asterisk</span>
                 </div>
                 <div class="skill-group">
                     <span class="skill-label" id="s-dev">Бағдарламалау және Деректер:</span>
                     <span class="skill-tag">Python (Pandas)</span> <span class="skill-tag">MySQL</span> 
-                    <span class="skill-tag">C++</span> <span class="skill-tag">HTML</span> <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">C++</span> <span class="skill-tag">NLP</span>
                 </div>
             </section>
 
@@ -140,17 +139,16 @@
                 <div class="exp-item">
                     <p class="exp-date">2021 — 2023</p>
                     <p class="exp-title" id="edu-1">Магистратура: Әл-Фараби атындағы ҚазҰУ</p>
-                    <p id="edu-1-desc">Ақпараттық технологиялар, Компьютерлік лингвистика</p>
                 </div>
                 <div class="exp-item">
                     <p class="exp-date">2017 — 2021</p>
                     <p class="exp-title" id="edu-2">Бакалавриат: Абай атындағы ҚазҰПУ</p>
-                    <p id="edu-2-desc">Информатика және есептеуіш техника</p>
                 </div>
             </section>
         </div>
     </div>
 
+    <!-- Тілдерді динамикалық ауыстыру логикасы (JavaScript) -->
     <script>
         const translations = {
             kz: {
@@ -164,22 +162,16 @@
                 "drive": "<i class='fas fa-car'></i> Жүргізуші куәлігі: B, C",
                 "job-title": "Системный администратор / IT-маман",
                 "t-about": "<i class='fas fa-user'></i> Өзім туралы",
-                "about-text": "IT-жүйелердің тұрақтылығына жауап беремін және техникалық мәселелерді тез шешемін. Жасанды интеллект саласына қызығушылығым бар. Python (Pandas) арқылы деректерді өңдеу негіздерін білемін.",
+                "about-text": "IT-жүйелердің тұрақтылығына жауап беремін және техникалық мәселелерді тез шешемін. Python (Pandas) арқылы деректерді өңдеу негіздері қолданылады.",
                 "t-exp": "<i class='fas fa-briefcase'></i> Жұмыс тәжірибесі",
                 "exp1-date": "Желтоқсан 2025 — Қазіргі уақыт",
-                "exp1-list": "<li>Серверлерді әкімшілендіру (1С, Asterisk, Биометрия).</li><li>Желілік инфрақұрылымды және АТС жүйесін қолдау.</li><li>Офистік бағдарламалық жасақтамаларды орнату және жөндеу.</li>",
                 "exp2-date": "Наурыз 2024 — Желтоқсан 2025",
-                "exp2-list": "<li>IT-жүйелерді техникалық сүйемелдеу және оргтехниканы жөндеу.</li><li>Отельдегі конференцияларға аудио-визуалды қолдау көрсету.</li><li>Корпоративтік поштаны әкімшілендіру.</li>",
-                "exp3-date": "Маусым 2022 — Ақпан 2024",
-                "exp3-list": "<li>1С және ЛИС бағдарламаларымен жұмыс.</li><li>Медициналық тіркеу және құжаттамаларды жүргізу.</li>",
                 "t-skills": "<i class='fas fa-tools'></i> Кәсіби дағдылар",
-                "s-admin": "Әкімшілендіру:",
+                "s-admin": "Әкімшілендіру технологиялары:",
                 "s-dev": "Бағдарламалау және Деректер:",
                 "t-edu": "<i class='fas fa-graduation-cap'></i> Білімі",
                 "edu-1": "Магистратура: Әл-Фараби атындағы ҚазҰУ",
-                "edu-2": "Бакалавриат: Абай атындағы ҚазҰПУ",
-                "edu-1-desc": "Ақпараттық технологиялар, Компьютерлік лингвистика",
-                "edu-2-desc": "Информатика және есептеуіш техника"
+                "edu-2": "Бакалавриат: Абай атындағы ҚазҰПУ"
             },
             ru: {
                 "t-contacts": "<i class='fas fa-address-book'></i> Контакты",
@@ -192,22 +184,16 @@
                 "drive": "<i class='fas fa-car'></i> Права категории: B, C",
                 "job-title": "Системный администратор / IT-специалист",
                 "t-about": "<i class='fas fa-user'></i> О себе",
-                "about-text": "Отвечаю за стабильность IT-систем и быстро решаю возникающие проблемы. Интересуюсь сферой ИИ. Имею базовые знания Python и обработки данных (Pandas, Excel).",
+                "about-text": "Обеспечиваю стабильность IT-систем и оперативно решаю технические задачи. Применяются основы обработки данных на Python (Pandas).",
                 "t-exp": "<i class='fas fa-briefcase'></i> Опыт работы",
                 "exp1-date": "Декабрь 2025 — Настоящее время",
-                "exp1-list": "<li>Администрирование серверов (1С, Asterisk, Биометрия).</li><li>Поддержка сетевой инфраструктуры и АТС.</li><li>Настройка и ремонт офисного ПО и техники.</li>",
                 "exp2-date": "Март 2024 — Декабрь 2025",
-                "exp2-list": "<li>Техническая поддержка IT-систем и ремонт оргтехники.</li><li>Сопровождение конференций (аудио-визуальное оборудование).</li><li>Администрирование корпоративной почты.</li>",
-                "exp3-date": "Июнь 2022 — Февраль 2024",
-                "exp3-list": "<li>Работа с программами 1С и ЛИС.</li><li>Медицинская регистрация и ведение документации.</li>",
                 "t-skills": "<i class='fas fa-tools'></i> Навыки",
-                "s-admin": "Администрирование:",
-                "s-dev": "Разработка и Данные:",
+                "s-admin": "Технологии администрирования:",
+                "s-dev": "Разработка и данные:",
                 "t-edu": "<i class='fas fa-graduation-cap'></i> Образование",
                 "edu-1": "Магистратура: КазНУ им. аль-Фараби",
-                "edu-2": "Бакалавриат: КазНПУ им. Абая",
-                "edu-1-desc": "Информационные технологии, Компьютерная лингвистика",
-                "edu-2-desc": "Информатика и вычислительная техника"
+                "edu-2": "Бакалавриат: КазНПУ им. Абая"
             },
             en: {
                 "t-contacts": "<i class='fas fa-address-book'></i> Contacts",
@@ -220,37 +206,27 @@
                 "drive": "<i class='fas fa-car'></i> Driving license: B, C",
                 "job-title": "System Administrator / IT Specialist",
                 "t-about": "<i class='fas fa-user'></i> Summary",
-                "about-text": "Responsible for IT system stability and quick troubleshooting. Interested in AI. Basic knowledge of Python and data processing (Pandas, Excel).",
+                "about-text": "Ensure IT system stability and handle technical issues promptly. Basic Python (Pandas) data processing is applied.",
                 "t-exp": "<i class='fas fa-briefcase'></i> Work Experience",
                 "exp1-date": "December 2025 — Present",
-                "exp1-list": "<li>Server administration (1C, Asterisk, Biometrics).</li><li>Network infrastructure and IP-PBX support.</li><li>Setup and repair of office software and peripherals.</li>",
                 "exp2-date": "March 2024 — December 2025",
-                "exp2-list": "<li>IT technical support and office equipment maintenance.</li><li>Conference support (audio-visual equipment).</li><li>Corporate email administration.</li>",
-                "exp3-date": "June 2022 — February 2024",
-                "exp3-list": "<li>Work with 1C and LIS software.</li><li>Medical registration and documentation.</li>",
                 "t-skills": "<i class='fas fa-tools'></i> Skills",
-                "s-admin": "Administration:",
+                "s-admin": "Administration Technologies:",
                 "s-dev": "Development & Data:",
                 "t-edu": "<i class='fas fa-graduation-cap'></i> Education",
                 "edu-1": "Master's: Al-Farabi Kazakh National University",
-                "edu-2": "Bachelor's: Abai Kazakh National Pedagogical University",
-                "edu-1-desc": "Information Technology, Computational Linguistics",
-                "edu-2-desc": "Informatics and Computer Engineering"
+                "edu-2": "Bachelor's: Abai Kazakh National Pedagogical University"
             }
         };
 
         function setLanguage(lang) {
             for (let id in translations[lang]) {
                 const element = document.getElementById(id);
-                if (element) {
-                    element.innerHTML = translations[lang][id];
-                }
+                if (element) element.innerHTML = translations[lang][id];
             }
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.innerText.toLowerCase() === lang) {
-                    btn.classList.add('active');
-                }
+                if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
             });
         }
     </script>
